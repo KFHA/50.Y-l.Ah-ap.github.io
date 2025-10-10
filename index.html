@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <img src="logo.jpg" alt="50.Yıl Ahşap Dekorasyon Logosu" width="200">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>50.Yıl Ahşap Dekorasyon</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: #2c3e50; color: white; padding: 40px 20px; text-align: center; }
+    header { background: #2c3e50; color: white; padding: 40px 20px 20px; text-align: center; position: relative; }
     header h1 { margin: 0; font-size: 36px; }
     header p { margin: 10px 0 0; font-size: 18px; }
+
+    /* Logo için stil */
+    .logo-container {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+    }
+    .logo-container img {
+      width: 100px; /* Logo boyutunu buradan ayarlayabilirsiniz */
+      height: auto;
+      border-radius: 50%; /* İsteğe bağlı: daire şeklinde logo */
+      background: white; /* Logo arkaplanı belirgin olsun diye */
+      padding: 5px;
+    }
 
     nav { background: #34495e; padding: 15px; text-align: center; }
     nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
@@ -18,22 +31,60 @@
     section { padding: 50px 20px; max-width: 900px; margin: auto; }
     section h2 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
 
+    /* Galeri/Görseller bölümü için CSS */
+    .gallery-container {
+      overflow-x: auto; /* Yana kaydırmayı aktif eder */
+      white-space: nowrap; /* Resimlerin yan yana durmasını sağlar */
+      padding: 10px 0;
+      -webkit-overflow-scrolling: touch; /* iOS'ta daha yumuşak kaydırma */
+      scrollbar-width: none; /* Firefox'ta kaydırma çubuğunu gizler */
+    }
+
+    .gallery-container::-webkit-scrollbar {
+      display: none; /* Chrome, Safari ve Opera'da kaydırma çubuğunu gizler */
+    }
+
+    .gallery-item {
+      display: inline-block; /* Resimlerin yan yana akmasını sağlar */
+      margin-right: 15px;
+      width: 300px; /* Resim genişliğini ayarlayın */
+      height: 200px; /* Resim yüksekliğini ayarlayın */
+      overflow: hidden;
+      border: 1px solid #ddd;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Resmi kutuya sığdırır ve kırpar */
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item img:hover {
+        transform: scale(1.05); /* Fare üzerine gelince resmi büyütme efekti */
+    }
+
     ul { list-style-type: square; padding-left: 20px; }
 
     footer { background: #2c3e50; color: white; text-align: center; padding: 20px; margin-top: 40px; }
 
-    .social a { margin: 0 10px; text-decoration: none; color: #2c3e50; font-weight: bold; }
+    .social a { margin: 0 10px; text-decoration: none; color: white; font-weight: bold; }
     .social a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <header>
+    <div class="logo-container">
+      <img src="logo.jpg" alt="50.Yıl Ahşap Dekorasyon Logo">
+    </div>
     <h1>50.Yıl Ahşap Dekorasyon</h1>
     <p>Ahşapta Kalite ve Estetiğin Buluşma Noktası</p>
   </header>
 
   <nav>
     <a href="#hakkimizda">Hakkımızda</a>
+    <a href="#galeri">Projelerimiz</a>
     <a href="#hizmetler">Hizmetler</a>
     <a href="#iletisim">İletişim</a>
   </nav>
@@ -45,7 +96,43 @@
       kaliteli işçilik ve müşteri memnuniyetini ön planda tutarak hizmet vermektedir.
     </p>
   </section>
+  
+  <section id="galeri">
+    <h2>Projelerimizden Görseller</h2>
+    <div class="gallery-container">
+      <div class="gallery-item"><img src="IMG-20251010-WA0092.jpg" alt="Ahşap Proje 1"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0093.jpg" alt="Ahşap Proje 2"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0094.jpg" alt="Ahşap Proje 3"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0095.jpg" alt="Ahşap Proje 4"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0096.jpg" alt="Ahşap Proje 5"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0097.jpg" alt="Ahşap Proje 6"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0098.jpg" alt="Ahşap Proje 7"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0099.jpg" alt="Ahşap Proje 8"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0100.jpg" alt="Ahşap Proje 9"></div>
 
+      <div class="gallery-item"><img src="IMG-20251010-WA0102.jpg" alt="Ahşap Proje 10"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0103.jpg" alt="Ahşap Proje 11"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0104.jpg" alt="Ahşap Proje 12"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0105.jpg" alt="Ahşap Proje 13"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0106.jpg" alt="Ahşap Proje 14"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0115.jpg" alt="Ahşap Proje 15"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0116.jpg" alt="Ahşap Proje 16"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0117.jpg" alt="Ahşap Proje 17"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0118.jpg" alt="Ahşap Proje 18"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0119.jpg" alt="Ahşap Proje 19"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0120.jpg" alt="Ahşap Proje 20"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0121.jpg" alt="Ahşap Proje 21"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0122.jpg" alt="Ahşap Proje 22"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0123.jpg" alt="Ahşap Proje 23"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0124.jpg" alt="Ahşap Proje 24"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0125.jpg" alt="Ahşap Proje 25"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0126.jpg" alt="Ahşap Proje 26"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0127.jpg" alt="Ahşap Proje 27"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0128.jpg" alt="Ahşap Proje 28"></div>
+      <div class="gallery-item"><img src="IMG-20251010-WA0129.jpg" alt="Ahşap Proje 29"></div>
+      
+    </div>
+  </section>
   <section id="hizmetler">
     <h2>Hizmetlerimiz</h2>
     <ul>
@@ -73,5 +160,3 @@
   </footer>
 </body>
 </html>
-
-
