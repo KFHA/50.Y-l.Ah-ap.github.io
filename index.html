@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>50.Yıl Ahşap Dekorasyon</title>
+  <title>50.Yıl Ahşap Dekorasyon - Kayseri Ahşap Mobilya ve Kapı Üretimi</title>
+  <meta name="description" content="Kayseri'de 50 yıllık deneyimle ahşap mobilya, özel tasarım kapı ve iç mekan dekorasyonu hizmetleri. Kalite ve estetik.">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: #2c3e50; color: white; padding: 40px 20px 20px; text-align: center; position: relative; }
-    header h1 { margin: 0; font-size: 36px; }
-    header p { margin: 10px 0 0; font-size: 18px; }
+    /* GENEL TASARIM VE PROFESYONELLİK İYİLEŞTİRMELERİ */
+    html {
+      scroll-behavior: smooth; /* Yumuşak kaydırma */
+    }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f8f8f8; } /* Daha açık arkaplan */
+    header { background: #2c3e50; color: white; padding: 40px 20px 20px; text-align: center; position: relative; box-shadow: 0 4px 8px rgba(0,0,0,0.1); } /* Gölge eklendi */
+    header h1 { margin: 0; font-size: 40px; }
+    header p { margin: 10px 0 0; font-size: 20px; font-style: italic; }
 
     /* Logo için stil */
     .logo-container {
@@ -17,66 +22,149 @@
       left: 20px;
     }
     .logo-container img {
-      width: 100px; /* Logo boyutunu buradan ayarlayabilirsiniz */
+      width: 100px; 
       height: auto;
-      border-radius: 50%; /* İsteğe bağlı: daire şeklinde logo */
-      background: white; /* Logo arkaplanı belirgin olsun diye */
+      border-radius: 50%;
+      background: white; 
       padding: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Logo gölgesi */
     }
 
-    nav { background: #34495e; padding: 15px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
+    nav { background: #34495e; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    nav a { color: white; margin: 0 25px; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+    nav a:hover { color: #f39c12; text-decoration: none; } /* Hover rengi değiştirildi */
 
-    section { padding: 50px 20px; max-width: 900px; margin: auto; }
-    section h2 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+    section { padding: 60px 20px; max-width: 1000px; margin: auto; background-color: white; border-radius: 8px; margin-top: 20px; box-shadow: 0 0 15px rgba(0,0,0,0.05); } /* Section'a stil eklendi */
+    section h2 { color: #2c3e50; border-bottom: 3px solid #f39c12; padding-bottom: 10px; margin-bottom: 30px; font-weight: 700; }
 
     /* Galeri/Görseller bölümü için CSS */
     .gallery-container {
-      overflow-x: auto; /* Yana kaydırmayı aktif eder */
-      white-space: nowrap; /* Resimlerin yan yana durmasını sağlar */
+      overflow-x: scroll; /* Scroll yerine auto kullanıldı */
+      white-space: nowrap; 
       padding: 10px 0;
-      -webkit-overflow-scrolling: touch; /* iOS'ta daha yumuşak kaydırma */
-      scrollbar-width: none; /* Firefox'ta kaydırma çubuğunu gizler */
+      -webkit-overflow-scrolling: touch; 
+      scrollbar-width: none;
+      /* Daha şık bir kaydırma çubuğu */
+      background: #eee;
+      border-radius: 5px;
     }
 
     .gallery-container::-webkit-scrollbar {
-      display: none; /* Chrome, Safari ve Opera'da kaydırma çubuğunu gizler */
+      display: none;
     }
 
     .gallery-item {
-      display: inline-block; /* Resimlerin yan yana akmasını sağlar */
-      margin-right: 15px;
-      width: 300px; /* Resim genişliğini ayarlayın */
-      height: 200px; /* Resim yüksekliğini ayarlayın */
+      display: inline-block;
+      margin-right: 20px;
+      width: 320px; /* Görsel Boyutu Büyütüldü */
+      height: 220px; /* Görsel Boyutu Büyütüldü */
       overflow: hidden;
-      border: 1px solid #ddd;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      border: 3px solid #fff;
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.2); /* Daha belirgin gölge */
+      border-radius: 5px;
+      cursor: pointer; /* Tıklanabilir olduğunu gösterir */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-5px) scale(1.02); /* Hafif yukarı ve büyütme */
+        box-shadow: 6px 6px 15px rgba(0,0,0,0.3);
     }
 
     .gallery-item img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Resmi kutuya sığdırır ve kırpar */
-      transition: transform 0.3s ease;
+      object-fit: cover;
+      transition: transform 0.5s ease;
     }
     
-    .gallery-item img:hover {
-        transform: scale(1.05); /* Fare üzerine gelince resmi büyütme efekti */
+    ul { list-style-type: none; padding-left: 0; }
+    ul li { margin-bottom: 15px; padding-left: 30px; position: relative; font-size: 17px; }
+    ul li::before {
+        content: '✓'; /* Şık bir onay işareti */
+        color: #f39c12;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        position: absolute;
+        left: 0;
     }
 
-    ul { list-style-type: square; padding-left: 20px; }
+    /* LIGHTBOX (BÜYÜK GÖRSEL) STİLLERİ */
+    .modal {
+        display: none; /* Varsayılan olarak gizli */
+        position: fixed;
+        z-index: 100;
+        padding-top: 50px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.9); /* Siyah arka plan */
+    }
 
-    footer { background: #2c3e50; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 900px;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
 
-    .social a { margin: 0 10px; text-decoration: none; color: white; font-weight: bold; }
+    @keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    
+    /* İLERİ/GERİ BUTONLARI */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    footer { background: #2c3e50; color: white; text-align: center; padding: 25px; margin-top: 60px; }
+    .social a { margin: 0 10px; text-decoration: none; color: #f39c12; font-weight: bold; }
     .social a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <header>
     <div class="logo-container">
-      <img src="logo.jpg" alt="50.Yıl Ahşap Dekorasyon Logo">
+      <img src="IMG-20251010-WA0101.jpg" alt="50.Yıl Ahşap Dekorasyon Logo">
     </div>
     <h1>50.Yıl Ahşap Dekorasyon</h1>
     <p>Ahşapta Kalite ve Estetiğin Buluşma Noktası</p>
@@ -94,57 +182,60 @@
     <p>
       50.Yıl Ahşap Dekorasyon, yılların deneyimiyle ahşap dekorasyon alanında
       kaliteli işçilik ve müşteri memnuniyetini ön planda tutarak hizmet vermektedir.
+      Ahşapta kalite ve estetiğin buluşma noktası olarak, projelerinize özel çözümler sunuyor,
+      yaşam alanlarınızı ahşabın sıcaklığıyla dönüştürüyoruz.
     </p>
   </section>
   
   <section id="galeri">
     <h2>Projelerimizden Görseller</h2>
     <div class="gallery-container">
-      <div class="gallery-item"><img src="IMG-20251010-WA0092.jpg" alt="Ahşap Proje 1"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0093.jpg" alt="Ahşap Proje 2"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0094.jpg" alt="Ahşap Proje 3"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0095.jpg" alt="Ahşap Proje 4"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0096.jpg" alt="Ahşap Proje 5"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0097.jpg" alt="Ahşap Proje 6"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0098.jpg" alt="Ahşap Proje 7"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0099.jpg" alt="Ahşap Proje 8"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0100.jpg" alt="Ahşap Proje 9"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(1)"><img src="IMG-20251010-WA0092.jpg" alt="Ahşap Mutfak Dolabı Projesi"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(2)"><img src="IMG-20251010-WA0093.jpg" alt="Özel Tasarım Ahşap Kapı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(3)"><img src="IMG-20251010-WA0094.jpg" alt="Ahşap İç Mekan Dekorasyonu"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(4)"><img src="IMG-20251010-WA0095.jpg" alt="Masif Ahşap Masa Tasarımı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(5)"><img src="IMG-20251010-WA0096.jpg" alt="Ahşap Tavan Kaplama Örneği"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(6)"><img src="IMG-20251010-WA0097.jpg" alt="Modern Ahşap Yatak Odası Takımı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(7)"><img src="IMG-20251010-WA0098.jpg" alt="Ahşap Banyo Dolabı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(8)"><img src="IMG-20251010-WA0099.jpg" alt="Giriş Holü Ahşap Konsol"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(9)"><img src="IMG-20251010-WA0100.jpg" alt="Proje 9 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(10)"><img src="IMG-20251010-WA0102.jpg" alt="Proje 10 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(11)"><img src="IMG-20251010-WA0103.jpg" alt="Proje 11 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(12)"><img src="IMG-20251010-WA0104.jpg" alt="Proje 12 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(13)"><img src="IMG-20251010-WA0105.jpg" alt="Proje 13 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(14)"><img src="IMG-20251010-WA0106.jpg" alt="Proje 14 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(15)"><img src="IMG-20251010-WA0115.jpg" alt="Proje 15 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(16)"><img src="IMG-20251010-WA0116.jpg" alt="Proje 16 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(17)"><img src="IMG-20251010-WA0117.jpg" alt="Proje 17 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(18)"><img src="IMG-20251010-WA0118.jpg" alt="Proje 18 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(19)"><img src="IMG-20251010-WA0119.jpg" alt="Proje 19 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(20)"><img src="IMG-20251010-WA0120.jpg" alt="Proje 20 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(21)"><img src="IMG-20251010-WA0121.jpg" alt="Proje 21 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(22)"><img src="IMG-20251010-WA0122.jpg" alt="Proje 22 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(23)"><img src="IMG-20251010-WA0123.jpg" alt="Proje 23 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(24)"><img src="IMG-20251010-WA0124.jpg" alt="Proje 24 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(25)"><img src="IMG-20251010-WA0125.jpg" alt="Proje 25 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(26)"><img src="IMG-20251010-WA0126.jpg" alt="Proje 26 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(27)"><img src="IMG-20251010-WA0127.jpg" alt="Proje 27 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(28)"><img src="IMG-20251010-WA0128.jpg" alt="Proje 28 Detayı"></div>
+      <div class="gallery-item" onclick="openModal();currentSlide(29)"><img src="IMG-20251010-WA0129.jpg" alt="Proje 29 Detayı"></div>
 
-      <div class="gallery-item"><img src="IMG-20251010-WA0102.jpg" alt="Ahşap Proje 10"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0103.jpg" alt="Ahşap Proje 11"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0104.jpg" alt="Ahşap Proje 12"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0105.jpg" alt="Ahşap Proje 13"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0106.jpg" alt="Ahşap Proje 14"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0115.jpg" alt="Ahşap Proje 15"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0116.jpg" alt="Ahşap Proje 16"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0117.jpg" alt="Ahşap Proje 17"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0118.jpg" alt="Ahşap Proje 18"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0119.jpg" alt="Ahşap Proje 19"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0120.jpg" alt="Ahşap Proje 20"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0121.jpg" alt="Ahşap Proje 21"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0122.jpg" alt="Ahşap Proje 22"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0123.jpg" alt="Ahşap Proje 23"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0124.jpg" alt="Ahşap Proje 24"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0125.jpg" alt="Ahşap Proje 25"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0126.jpg" alt="Ahşap Proje 26"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0127.jpg" alt="Ahşap Proje 27"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0128.jpg" alt="Ahşap Proje 28"></div>
-      <div class="gallery-item"><img src="IMG-20251010-WA0129.jpg" alt="Ahşap Proje 29"></div>
       
     </div>
   </section>
   <section id="hizmetler">
     <h2>Hizmetlerimiz</h2>
     <ul>
-      <li>Ahşap mobilya tasarımı ve üretimi</li>
-      <li>İç mekân dekorasyonu</li>
-      <li>Ahşap kapı, dolap ve özel tasarımlar</li>
-      <li>Proje bazlı ahşap uygulamaları</li>
+      <li>Ahşap mobilya tasarımı ve üretimi: Size özel ölçü ve tasarımlarla, kaliteli ve uzun ömürlü mobilyalar üretiyoruz.</li>
+      <li>İç mekân dekorasyonu: Ev, ofis ve ticari alanlar için komple ahşap entegrasyon çözümleri.</li>
+      <li>Ahşap kapı, dolap ve özel tasarımlar: Masif veya modern çizgilere sahip özel kapı ve gömme dolap uygulamaları.</li>
+      <li>Proje bazlı ahşap uygulamaları: Büyük çaplı inşaat ve tadilat projelerine yönelik anahtar teslim ahşap işçiliği.</li>
     </ul>
   </section>
 
   <section id="iletisim">
     <h2>İletişim</h2>
+    <p>Projeleriniz için bize ulaşın, hayalinizdeki ahşap tasarımları gerçeğe dönüştürelim.</p>
     <p><strong>Telefon:</strong> 0 (xxx) xxx xx xx</p>
     <p><strong>E-posta:</strong> info@50yilahsap.com</p>
     <p><strong>Adres:</strong> Kayseri, Türkiye</p>
@@ -158,5 +249,86 @@
   <footer>
     <p>© 2025 50.Yıl Ahşap Dekorasyon. Tüm Hakları Saklıdır.</p>
   </footer>
+  
+  <div id="myModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0092.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0093.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0094.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0095.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0096.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0097.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0098.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0099.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0100.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0102.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0103.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0104.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0105.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0106.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0115.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0116.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0117.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0118.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0119.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0120.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0121.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0122.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0123.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0124.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0125.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0126.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0127.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0128.jpg"></div>
+      <div class="mySlides"><img class="modal-content" src="IMG-20251010-WA0129.jpg"></div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript Kodu (Lightbox için)
+    var modal = document.getElementById("myModal");
+    var slideIndex = 1;
+    
+    function openModal() {
+      modal.style.display = "block";
+      // Arka planı kararttığında modal'a tıklamak kapatır
+      modal.onclick = function(event) {
+          if (event.target == modal) {
+              closeModal();
+          }
+      }
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      slides[slideIndex-1].style.display = "block";
+    }
+    
+    // Sayfa yüklendiğinde slaytı göster
+    showSlides(slideIndex);
+    
+  </script>
 </body>
 </html>
